@@ -1,417 +1,186 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--========== BOX ICONS ==========-->
-    <link rel="stylesheet" href="css/boxicons.min.css">
-
-    <!--========== CSS ==========-->
-    <link rel="stylesheet" href="css/resume.css">
-
-    <title>Jaya Chandra Sai Kotapati Resume</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Jaya Chandra Sai Kotapati — Resume</title>
+<meta name="description" content="Resume of Jaya Chandra Sai Kotapati — Full Stack Developer, AWS & GCP Certified, B.Tech CS (AI & ML)"/>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Arial',sans-serif;font-size:13.5px;line-height:1.55;color:#111;background:#ebebeb;padding:2rem 1rem}
+  .page{max-width:820px;margin:0 auto;background:#fff;padding:2.2rem 2.4rem;border:1px solid #ccc}
+  .print-btn{display:block;margin:0 auto 1.2rem;padding:9px 30px;background:#111;color:#fff;border:none;font-size:13px;cursor:pointer;letter-spacing:.05em;font-family:Arial,sans-serif;border-radius:2px}
+  .print-btn:hover{background:#333}
+  h1{font-size:24px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;margin-bottom:2px}
+  .tagline{font-size:12.5px;color:#444;margin-bottom:5px}
+  .contact{font-size:11.5px;color:#333;display:flex;flex-wrap:wrap;align-items:center;gap:1px 6px;margin-bottom:12px}
+  .contact a{color:#111;text-decoration:none}
+  .contact a:hover{text-decoration:underline}
+  .contact .sep{color:#bbb}
+  hr.top{border:none;border-top:2.5px solid #111;margin-bottom:13px}
+  .section{margin-bottom:13px}
+  .sec-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;border-bottom:1px solid #111;padding-bottom:3px;margin-bottom:8px;color:#111}
+  .summary{font-size:12.5px;line-height:1.65;color:#222}
+  .skills-wrap{display:flex;flex-direction:column;gap:2px}
+  .skill-row{font-size:12px;color:#222;line-height:1.5}
+  .skill-row strong{color:#111;font-weight:700;min-width:100px;display:inline-block}
+  .job{margin-bottom:9px}
+  .job-header{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:2px}
+  .job-title{font-weight:700;font-size:13px}
+  .job-company{font-size:12.5px;color:#333}
+  .job-date{font-size:11.5px;color:#555;font-style:italic;white-space:nowrap}
+  ul.bullets{margin:4px 0 0 16px;list-style:disc}
+  ul.bullets li{font-size:12px;color:#222;margin-bottom:2px;line-height:1.55}
+  .project{margin-bottom:8px}
+  .proj-header{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:2px}
+  .proj-name{font-weight:700;font-size:12.5px}
+  .proj-tech{font-size:11px;color:#555;font-style:italic}
+  .cert-row{display:flex;justify-content:space-between;align-items:baseline;font-size:12px;margin-bottom:4px}
+  .cert-name{font-weight:700}
+  .cert-date{color:#555;font-style:italic;font-size:11.5px}
+  .edu-row{margin-bottom:6px}
+  .edu-header{display:flex;justify-content:space-between;font-size:12.5px;font-weight:700}
+  .edu-sub{font-size:12px;color:#444;margin-top:1px}
+  .addl-row{font-size:12px;margin-bottom:3px}
+  .addl-row strong{font-weight:700}
+  @media print{
+    body{background:#fff;padding:0}
+    .page{border:none;padding:1.4rem 1.8rem;max-width:100%}
+    .print-btn{display:none}
+    a{color:#111!important;text-decoration:none!important}
+  }
+  @media(max-width:600px){
+    .page{padding:1.2rem 1rem}
+    .job-header,.proj-header,.cert-row,.edu-header{flex-direction:column;gap:1px}
+  }
+</style>
 </head>
-
 <body>
-    <!--========== HEADER ==========-->
-    <header class="l-header" id="header">
-        <nav class="nav bd-container">
-            <a href="#" class="nav__LOGO">JC</a>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">
-                            <i class="bx bx-home nav__icon"></i>Home
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#profile" class="nav__link">
-                            <i class="bx bx-user nav__icon"></i>Profile
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#education" class="nav__link">
-                            <i class="bx bx-book nav__icon"></i>Education
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#skills" class="nav__link">
-                            <i class="bx bx-receipt"></i>Skills
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#experience" class="nav__link">
-                            <i class="bx bx-briefcase-alt nav__icon"></i>Experience
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#certificate" class="nav__link">
-                            <i class="bx bx-award nav__icon"></i>Certificate
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#references" class="nav__link">
-                            <i class="bx bx-link-external nav__icon"></i>References
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="bx bx-grid-alt"></i>
-            </div>
-        </nav>
-    </header>
-
-
-    <main class="l-main bd-container">
-        <!-- All elements within this div, is generated in PDF -->
-        <div class="resume" id="area-cv">
-
-            <div class="resume__left">
-                <!--========== HOME ==========-->
-                <section class="home" id="home">
-                    <div class="home__container section bd-grid">
-                        <div class="home__data bd-grid">
-                            <img src="images/Profile.png" class="home__img" alt="">
-
-                            <h1 class="home__title">Jaya Chandra Sai <b>Kotapati</b></h1>
-                            <h3 class="home__profession">Web Developer</h3>
-
-                            <!-- Button to generate and download the pdf. Available for desktop. -->
-                            <div>
-                                <a download="" href="./assets/pdf/ResumeCv.pdf" class="home__button-movil">Download</a>
-                            </div>
-                        </div>
-
-                        <div class="home__address bd-grid">
-                            <span class="home__information">
-                                <i class="bx bx-map home__icon"></i> Vijayawada, Andhra Pradesh- India
-                            </span>
-
-                            <span class="home__information">
-                                <i class="bx bx-envelope home__icon"></i> Jayachandra2911@gmail.com
-                            </span>
-
-                            <span class="home__information">
-                                <i class="bx bx-phone home__icon"></i> 7842708830
-                            </span>
-                        </div>
-
-                    </div>
-
-                    <!-- Theme change button -->
-                    <i class="bx bx-moon change-theme" title="Theme" id="theme-button"></i>
-
-
-                    <!-- Button to generate and download the pdf. Available for desktop. -->
-                    <i class="bx bx-download generate-pdf" title="Generate PDF" id="resume-button"></i>
-
-                </section>
-
-                <!--========== SOCIAL ==========-->
-                <section class="social section">
-                    <h2 class="section-title">SOCIAL</h2>
-
-                    <div class="social__container bd-grid">
-                        <a href="https://www.linkedin.com/in/jaya-chandra-sai-kotapati/" target="_blank" class="social__link">
-                            <i class="bx bxl-linkedin-square social__icon"></i> Jaya Chandra Sai Kotapati
-                        </a>
-
-                        <a href="https://github.com/Jayachandra2911" target="_blank" class="social__link">
-                            <i class="bx bxl-github social__icon"></i> Jayachandra2911
-                        </a>
-                    </div>
-                </section>
-
-                <!--========== PROFILE ==========-->
-                <section class="profile section" id="profile">
-                    <h2 class="section-title">Profile</h2>
-
-                    <p class="profile__description">I’m Jayachandra Sai Kotapati, 
-                        a dedicated final-year B.Tech student at VVIT College, 
-                        passionate about frontend web development. 
-                        With hands-on internship experience at Skillcraft Technology 
-                        and a GCP certification, I’ve built real-time web apps.
-                        Always eager to learn new technologies,
-                        I strive to create intuitive, user-friendly solutions that make
-                        a real-world impact.                    
-                    </p>
-                </section>
-
-                <!--========== EDUCATION ==========-->
-                <section class="education section" id="education">
-                    <h2 class="section-title">Education</h2>
-
-                    <div class="education__container bd-grid">
-                        <div class="education__content">
-                            <div class="education__time">
-                                <span class="education__rounder"></span>
-                                <span class="education__line"></span>
-                            </div>
-
-                            <div class="education__data bd-grid">
-                                <h3 class="education__title">BTECH</h3>
-                                <span class="education__studies">VVIT</span>
-                                <span class="eductaion__year">2022 - 2026</span>
-                            </div>
-                        </div>
-
-                        <div class="education__content">
-                            <div class="education__time">
-                                <span class="education__rounder"></span>
-                                <span class="education__line"></span>
-                            </div>
-
-                            <div class="education__data bd-grid">
-                                <h3 class="education__title">College</h3>
-                                <span class="education__studies">Sri Srinivasa Graviity</span>
-                                <span class="eductaion__year">2020 - 2022</span>
-                            </div>
-                        </div>
-
-                        <div class="education__content">
-                            <div class="education__time">
-                                <span class="education__rounder"></span>
-                                <!-- <span class="education__line"></span> -->
-                            </div>
-
-                            <div class="education__data bd-grid">
-                                <h3 class="education__title">School</h3>
-                                <span class="education__studies">VPS</span>
-                                <span class="eductaion__year">2011 - 2020</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-
-                <!--========== SKILLS  ==========-->
-                <section class="skills section" id="skills">
-                    <h2 class="section-title">Skills</h2>
-
-                    <div class="skills__content bd-grid">
-
-                        <ul class="skills__data">
-                            <li class="skill__name">
-                                <span class="skills__circle"></span> Html & Css
-                            </li>
-
-                            <li class="skill__name">
-                                <span class="skills__circle"></span> Javascript
-                            </li>
-
-                            <li class="skill__name">
-                                <span class="skills__circle"></span> Next js
-                            </li>
-
-                            <li class="skill__name">
-                                <span class="skills__circle"></span> Node js
-                            </li>
-                        </ul>
-
-
-                        <ul class="skills__data">
-                            <li class="skill__name">
-                                <span class="skills__circle"></span> Express js
-                            </li>
-
-                            <li class="skill__name">
-                                <span class="skills__circle"></span> React
-                            </li>
-
-                            <li class="skill__name">
-                                <span class="skills__circle"></span> Firebase
-                            </li>
-
-                            <li class="skill__name">
-                                <span class="skills__circle"></span> Github
-                            </li>
-
-                        </ul>
-
-
-                    </div>
-                </section>
-
-            </div>
-
-
-
-
-
-
-
-            <div class="resume__right">
-                <!--========== EXPERIENCE ==========-->
-                <section class="experience section" id="experience">
-                    <h2 class="section-title">Projects</h2>
-
-                    <div class="experience__container bd-grid">
-
-                        <div class="experience__content">
-                            <div class="experience__time">
-                                <span class="experience__rounder"></span>
-                                <span class="experience__line"></span>
-                            </div>
-
-                            <div class="experience__data bd-grid">
-                                <h3 class="experience__title">Learning Path Dashboard for Enhancing Skills (SIH:1615)</h3>
-                                <span class="experience__company">2024 - Present</span>
-                                <p class="experience__description">Developed a web-based dashboard to help users follow personalized learning paths and track skill progress.
-                                    Implemented using HTML, CSS, JavaScript, with cloud integration for storing user data and content.
-                                    Features include goal-based course suggestions, progress tracking, and a responsive design.</p>
-                            </div>
-                        </div>
-
-                        <div class="experience__content">
-                            <div class="experience__time">
-                                <span class="experience__rounder"></span>
-                                <span class="experience__line"></span>
-                            </div>
-
-                            <div class="experience__data bd-grid">
-                                <h3 class="experience__title">Solar Calculator</h3>
-                                <span class="experience__company">2025</span>
-                                <p class="experience__description">Developed a solar calculator web application to help users estimate the solar panel requirements for their homes.
-                                    Implemented using TypeScript for the frontend which allows users to input their energy needs and receive customized solar solutions.
-                                    Features include a user-friendly interface, real-time calculations.</p>
-                            </div>
-                        </div>
-
-                        <div class="experience__content">
-                            <div class="experience__time">
-                                <span class="experience__rounder"></span>
-                                <!-- <span class="experience__line"></span> -->
-                            </div>
-                             <p>
-                                    For more projects, visit <b>My Portfolio WebSite</b>
-                                   <b><a href="https://jayachandra-portfolio.vercel.app/">Click here</a></b>  
-                                </p>
-                            <!--<div class="experience__data bd-grid">
-                                <h3 class="experience__title">MOBILE APPLICATION DEVELOPER</h3>
-                                <span class="experience__company">From 2019 to 2021 | App Tech</span>
-                                <p class="experience__description">Work in this company dedicating the best
-                                    responsiblity in the area that corresponds, delivering the best results for the
-                                    company and improving productivity.</p>
-                            </div>--></div>
-                            
-                        </div>    
-                </section>
-
-                <!--========== CERTIFICATES ==========-->
-                <section class="certificate section" id="certificates">
-                    <h2 class="section-title">Certificates</h2>
-
-                    <div class="certificate__container bd-grid">
-                        <div class="certificate__content">
-                            <h3 class="certificate__title">GCP Global Certification (may 2025 - may 2028)</h3>
-                            <p class="certificate__description">I'm Certified GCP Associate Cloud Engineer by Google Cloud Platform
-                                for demonstrating the ability to deploy applications, monitor operations, and manage
-                                enterprise  solutions on Google Cloud Platform.</p>
-                        </div>
-
-                      <!---<div class="certificate__content">
-                            <h3 class="certificate__title">Certificate of attendance on computer technology</h3>
-                            <p class="certificate__description">for meeting the experience of leading the team to work
-                                the specified tasks in the labor field</p>
-                        </div>
-
-                        <div class="certificate__content">
-                            <h3 class="certificate__title">Achievement medal for productivity excellence during the year
-                                (2019)</h3>
-                            <p class="certificate__description">for meeting the experience of leading the team to work
-                                the specified tasks in the labor field</p>
-                        </div>
-                    </div>-->
-
-                </section>
-
-                <!--========== REFERENCES ==========-->
-                <section class="references section" id="references">
-                    <h2 class="section-title">Experience</h2>
-                    <div class="experience__data bd-grid">
-                                <h3 class="experience__title">Web Developer Intern</h3>
-                                <span class="experience__company">May - June 2025| Remote | Skillcraft Technology </span>
-                                <p class="experience__description">Skillcraft Internship offered me hands-on experience in
-                                     web development through basic projects.
-                                     I honed my skills in HTML, CSS, JavaScript, 
-                                     while applying best practices in responsive design.</p>
-                            </div>
-                </section>
-
-                <!--========== LANGUAGES ==========-->
-                <section class="languages section">
-                    <h2 class="section-title">Languages</h2>
-
-                    <div class="languages__container">
-                        <ul class="languages__content bd-grid">
-                            <li class="languages__name">
-                                <span class="languages__circle"></span>English
-                            </li>
-                            
-                            <li class="languages__name">
-                                <span class="languages__circle"></span>Telugu
-                            </li>
-
-                            <li class="languages__name">
-                                <span class="languages__circle"></span>Hindi
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-
-                <!--========== INTERESTS ==========-->
-                <section class="interests section">
-                    <h2 class="section-title">Interests</h2>
-
-                    <div class="intrests__container bd-grid">
-                        <div class="intrests__contnet">
-                            <i class="bx bx-headphone intrests__icon"></i>
-                            <span class="intrests__name">Music</span>
-                        </div>
-
-                        <div class="intrests__contnet">
-                            <i class="bx bxs-bowl-hot intrests__icon"></i>
-                            <span class="intrests__name">Cooking</span>
-                        </div>
-
-                        <div class="intrests__contnet">
-                            <i class="bx bx-book intrests__icon"></i>
-                            <span class="intrests__name">Read</span>
-                        </div>
-
-                        <div class="intrests__contnet">
-                            <i class="bx bx-dumbbell intrests__icon"></i>
-                            <span class="intrests__name">Fitness</span>
-                        </div>
-                    </div>
-                </section>
-            </div>
+<button class="print-btn" onclick="window.print()">&#8595; Download / Print PDF</button>
+
+<div class="page">
+
+  <h1>Jaya Chandra Sai Kotapati</h1>
+  <div class="tagline">Full Stack Developer &nbsp;&middot;&nbsp; B.Tech Computer Science (AI &amp; ML) &nbsp;&middot;&nbsp; AWS &amp; GCP Certified</div>
+  <div class="contact">
+    <a href="mailto:jayachandra2911@gmail.com">jayachandra2911@gmail.com</a>
+    <span class="sep">|</span>
+    <a href="https://www.linkedin.com/in/jaya-chandra-sai-kotapati" target="_blank">linkedin.com/in/jaya-chandra-sai-kotapati</a>
+    <span class="sep">|</span>
+    <a href="https://jayachandra-portfolio.vercel.app" target="_blank">jayachandra-portfolio.vercel.app</a>
+    <span class="sep">|</span>
+    <span>Vijayawada, India</span>
+  </div>
+  <hr class="top"/>
+
+  <div class="section">
+    <div class="sec-title">Professional Summary</div>
+    <p class="summary">Computer Science graduate (AI &amp; ML) with hands-on experience in full-stack web development, cloud deployment, and AI-driven systems. Proficient in Python, JavaScript, FastAPI, MongoDB, and Next.js. Holds dual cloud certifications (AWS &amp; GCP). Demonstrated leadership as Sub Team Lead at Ozibook. Passionate about building scalable, real-world solutions.</p>
+  </div>
+
+  <div class="section">
+    <div class="sec-title">Technical Skills</div>
+    <div class="skills-wrap">
+      <div class="skill-row"><strong>Languages</strong> JavaScript, Python, HTML5, CSS3</div>
+      <div class="skill-row"><strong>Frameworks</strong> Next.js, FastAPI, scikit-learn, NLTK</div>
+      <div class="skill-row"><strong>Cloud &amp; DB</strong> AWS (EC2, S3, Lambda, IAM) &nbsp;&middot;&nbsp; GCP (Compute Engine, Cloud IAM) &nbsp;&middot;&nbsp; MongoDB</div>
+      <div class="skill-row"><strong>Tools</strong> Git, GitHub, Wix, WordPress, VS Code &nbsp;&middot;&nbsp; REST APIs, Agile</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-title">Certifications</div>
+    <div class="cert-row">
+      <span><span class="cert-name">AWS Certified Cloud Practitioner</span> &nbsp;&mdash;&nbsp; Amazon Web Services</span>
+      <span class="cert-date">Oct 2025 &ndash; Oct 2028</span>
+    </div>
+    <div class="cert-row">
+      <span><span class="cert-name">Associate Cloud Engineer</span> &nbsp;&mdash;&nbsp; Google Cloud</span>
+      <span class="cert-date">May 2025 &ndash; May 2028</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-title">Experience</div>
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <span class="job-title">Website Developer &amp; Sub Team Lead</span>
+          <span class="job-company"> &nbsp;&middot;&nbsp; Ozibook &nbsp;&middot;&nbsp; Internship</span>
         </div>
-    </main>
+        <span class="job-date">Aug 2025 &ndash; Feb 2026</span>
+      </div>
+      <ul class="bullets">
+        <li>Led and contributed to client-facing website development using Wix and WordPress; managed timelines, maintained quality standards, mentored junior developers, and improved team delivery — resulting in consistent on-time project completion across multiple client engagements..</li>
+      </ul>
+    </div>
+  </div>
 
-    <!--========== SCROLL TOP ==========-->
-    <a href="#" class="scrolltop" id="scroll-top">
-        <i class="bx bx-up-arrow-alt scrolltop__icon"></i>
-    </a>
+  <div class="section">
+    <div class="sec-title">Projects</div>
+    <div class="project">
+      <div class="proj-header">
+        <span class="proj-name">AI-Based Timetable Generation System</span>
+        <span class="proj-tech">FastAPI &middot; MongoDB &middot; Next.js &middot; Genetic Algorithm &middot; LLM</span>
+      </div>
+      <ul class="bullets">
+        <li>Built AI timetable system using Genetic Algorithm (500 generations, ~95% conflict reduction); full-stack solution with LLM integration for real-time analytics, reducing manual scheduling effort by ~80%.</li>
+      </ul>
+    </div>
+    <div class="project">
+      <div class="proj-header">
+        <span class="proj-name">Sentiment Analysis in Social Media</span>
+        <span class="proj-tech">Python &middot; NLP &middot; scikit-learn &middot; NLTK</span>
+      </div>
+      <ul class="bullets">
+        <li>Developed real-time sentiment classification system using NLP and supervised ML to detect emotions and trend insights from Twitter and Facebook data.</li>
+      </ul>
+    </div>
+    <div class="project">
+      <div class="proj-header">
+        <span class="proj-name">Learning Path Dashboard (SIH: 1615)</span>
+        <span class="proj-tech">HTML &middot; CSS &middot; JavaScript &middot; Cloud Storage</span>
+      </div>
+      <ul class="bullets">
+        <li>Personalised learning dashboard with goal-based course suggestions, progress tracking, and cloud-integrated user data management.</li>
+      </ul>
+    </div>
+    <div class="project">
+      <div class="proj-header">
+        <span class="proj-name">SkillSeed &ndash; Community Service Project</span>
+        <span class="proj-tech">HTML &middot; CSS &middot; JavaScript &middot; Cloud Storage</span>
+      </div>
+      <ul class="bullets">
+        <li>Mentor-learner platform with skill-tracking dashboards and collaborative tools, connecting community members for continuous skill development.</li>
+      </ul>
+    </div>
+  </div>
 
+  <div class="section">
+    <div class="sec-title">Education</div>
+    <div class="edu-row">
+      <div class="edu-header">
+        <span>Vasireddy Venkatadri Institute of Technology</span>
+        <span style="font-weight:400;font-style:italic;font-size:11.5px;color:#555">Oct 2022 &ndash; Jul 2026</span>
+      </div>
+      <div class="edu-sub">B.Tech in Computer Science (Artificial Intelligence &amp; Machine Learning)</div>
+    </div>
+    <div class="edu-row">
+      <div class="edu-header">
+        <span>Sri Srinivasa Gravity College</span>
+        <span style="font-weight:400;font-style:italic;font-size:11.5px;color:#555">Jun 2020 &ndash; Jun 2022</span>
+      </div>
+      <div class="edu-sub">Intermediate, MPC Stream</div>
+    </div>
+  </div>
 
+  <div class="section">
+    <div class="sec-title">Additional Information</div>
+    <div class="addl-row"><strong>Languages:</strong> English (Professional), Telugu (Native), Hindi</div>
+    <div class="addl-row"><strong>Leadership:</strong> Organised multiple NSS events at college level with 1,000+ participants &mdash; event planning, coordination, and people management at scale.</div>
+  </div>
 
-
-
-
-    <!--========== HTML2PDF ==========-->
-    <script src="js/html2pdf.bundle.min.js"></script>
-
-    <!--========== MAIN JS ==========-->
-    <script src="js/resume.js"></script>
-
-
-</body></html>
+</div>
+</body>
+</html>
